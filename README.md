@@ -7,48 +7,51 @@
 [![MLflow](https://img.shields.io/badge/MLflow-Tracking-yellow.svg)](https://mlflow.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-An intelligent, full-stack system that automates resume screening and skill gap analysis. By leveraging NLP and Machine Learning on the backend, and a modern Next.js dashboard on the frontend, it maps candidate resume skills against job requirements, classifies the match level, and provides actionable, curated upskilling recommendations.
+### An intelligent, full-stack system that automates resume screening and skill gap analysis. By leveraging NLP and Machine Learning on the backend, and a modern Next.js dashboard on the frontend, it maps candidate resume skills against job requirements, classifies the match level, and provides actionable, curated upskilling recommendations.
 
 > 💡 **Note:** The frontend of this project was bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app) and utilizes [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load the [Geist](https://vercel.com/font) font family.
 
 ---
 
 ## 📋 Table of Contents
-- [Executive Summary](#executive-summary)
-- [Key Features](#key-features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Prerequisites](#prerequisites)
-- [Installation & Setup](#installation--setup)
-- [Usage Guide](#usage-guide)
-- [API Documentation](#api-endpoints)
-- [Machine Learning Pipeline Details](#machine-learning-pipeline-details)
-- [Future Roadmap](#future-roadmap)
-- [License](#license)
+1. [Executive Summary](#executive-summary)
+2. [Key Features](#key-features)
+3. [Tech Stack](#tech-stack)
+4. [Project Structure](#project-structure)
+5. [Prerequisites](#prerequisites)
+6. [Installation & Setup](#installation--setup)
+7. [Usage Guide](#usage-guide)
+8. [API Documentation](#api-endpoints)
+9. [Machine Learning Pipeline Details](#machine-learning-pipeline-details)
+10. [Future Roadmap](#future-roadmap)
+11. [License](#license)
 
 ---
 
 ## 🎯 Executive Summary
-Recruiters spend ~30% of their time on manual resume screening, leading to inefficiency, inconsistency, and a lack of constructive feedback for candidates. This project solves that by providing:
+
+### Recruiters spend ~30% of their time on manual resume screening, leading to inefficiency, inconsistency, and a lack of constructive feedback for candidates. This project solves that by providing:
 1. **Automated Screening**: Reduces time-to-screen from minutes to under 500ms.
 2. **Explainable AI**: Outputs specific missing and matched skills to justify predictions.
 3. **Actionable Feedback**: Provides candidates with curated, free learning resources to bridge identified skill gaps.
 
 ### Target Classification Labels
-- 🟢 **Strong Match**: >90% of required skills met. *(Fast-track to interview)*
-- 🟡 **Moderate Match**: 60-90% of required skills met. *(Phone screen recommended)*
-- 🟠 **Skill Gap**: 30-60% of required skills met. *(Redirect to junior roles)*
-- 🔴 **High Skill Gap**: <30% of required skills met. *(Auto-reject with feedback)*
+
+1. 🟢 **Strong Match**: >90% of required skills met. *(Fast-track to interview)*
+2. 🟡 **Moderate Match**: 60-90% of required skills met. *(Phone screen recommended)*
+3. 🟠 **Skill Gap**: 30-60% of required skills met. *(Redirect to junior roles)*
+4. 🔴 **High Skill Gap**: <30% of required skills met. *(Auto-reject with feedback)*
 
 ---
 
 ## ✨ Key Features
-- 📄 **Multi-Format Parsing**: Extracts and cleans text from `.pdf`, `.docx`, and `.txt` files.
-- 🧠 **Smart NLP Extraction**: Regex-based skill extraction with a comprehensive synonym-mapping engine (e.g., "ml" → "machine learning", "gcp" → "google cloud").
-- 📊 **Advanced Feature Engineering**: Computes Jaccard Similarity, Cosine Similarity (TF-IDF), Missing Skill Count, and Exact Match Ratio.
-- 🤖 **High-Accuracy Modeling**: `GradientBoostingClassifier` optimized via `GridSearchCV` and tracked with **MLflow**.
-- 🎓 **Curated Learning Paths**: Recommends top-tier, free learning resources for missing skills.
-- 🔐 **Full-Stack Dashboard**: A modern Next.js UI featuring user authentication, drag-and-drop file uploads, circular progress match scores, and local analysis history.
+
+1. 📄 **Multi-Format Parsing**: Extracts and cleans text from `.pdf`, `.docx`, and `.txt` files.
+2. 🧠 **Smart NLP Extraction**: Regex-based skill extraction with a comprehensive synonym-mapping engine (e.g., "ml" → "machine learning", "gcp" → "google cloud").
+3. 📊 **Advanced Feature Engineering**: Computes Jaccard Similarity, Cosine Similarity (TF-IDF), Missing Skill Count, and Exact Match Ratio.
+4. 🤖 **High-Accuracy Modeling**: `GradientBoostingClassifier` optimized via `GridSearchCV` and tracked with **MLflow**.
+5. 🎓 **Curated Learning Paths**: Recommends top-tier, free learning resources for missing skills.
+6. 🔐 **Full-Stack Dashboard**: A modern Next.js UI featuring user authentication, drag-and-drop file uploads, circular progress match scores, and local analysis history.
 
 ---
 
@@ -107,15 +110,17 @@ skill_gap_classifier/
 ---
 
 ## ⚙️ Prerequisites
-- **Python**: 3.9 or higher
-- **Node.js**: 18.x or higher
-- **Package Managers**: `pip` (or `poetry`), `npm` (or `yarn`/`pnpm`/`bun`)
+
+1. **Python**: 3.9 or higher
+2. **Node.js**: 18.x or higher
+3. **Package Managers**: `pip` (or `poetry`), `npm` (or `yarn`/`pnpm`/`bun`)
 
 ---
 
 ## 🚀 Installation & Setup
 
 ### 1. Backend Setup
+
 ```bash
 # Clone the repository
 git clone https://github.com/KumargiBharath/AI-Resume-Skill-Gap-Classifier.git
@@ -130,6 +135,7 @@ pip install -e .
 ```
 
 2. Frontend Setup
+
 ```bash
 cd frontend
 
@@ -138,33 +144,43 @@ npm install
 # or yarn install / pnpm install / bun install
 ```
 
+---
+
 ## 💻 Usage Guide
 
 ## Step 1: Generate Synthetic Training Data
-Create a balanced dataset for the 4 classification labels.
+
+### Create a balanced dataset for the 4 classification labels.
+
 ```bash
 python -m src.data.generate_data
 ```
 
 ## Step 2: Train the Machine Learning Model
-Train the Gradient Boosting model, tune hyperparameters, and log metrics to MLflow.
+
+### Train the Gradient Boosting model, tune hyperparameters, and log metrics to MLflow.
+
 ```bash
 python -m src.modeling.train
 ```
 
 ## (Optional) View MLflow UI to track experiments:
+
 ```bash
 mlflow ui
 # Open http://localhost:5000 in your browser
 ```
 
 ## Step 3: Evaluate the Model
-Generate a classification report and save a confusion matrix.
+
+### Generate a classification report and save a confusion matrix.
+
 ```bash
 python -m src.modeling.evaluate_model
 ```
 
 ## Step 4: Start the FastAPI Backend
+
 ```bash
 # From the project root directory
 uvicorn api.app:app --reload
@@ -173,13 +189,18 @@ uvicorn api.app:app --reload
 ```
 
 ## Step 5: Start the Next.js Frontend
-Open a new terminal, navigate to the frontend folder, and run the development server:
+
+### Open a new terminal, navigate to the frontend folder, and run the development server:
+
 ```bash
 cd frontend
 npm run dev
 # or yarn dev, pnpm dev, bun dev
 ```
-Open http://localhost:3000 with your browser to see the result. You can start editing the page by modifying frontend/app/page.tsx. The page auto-updates as you edit the file.
+
+### Open http://localhost:3000 with your browser to see the result. You can start editing the page by modifying frontend/app/page.tsx. The page auto-updates as you edit the file.
+
+---
 
 ## 🔌 API Endpoints
 
@@ -190,6 +211,7 @@ Open http://localhost:3000 with your browser to see the result. You can start ed
 | `POST` | `/predict` | Analyze resume vs JD | **FormData:** `resume` (File), `job_description` (String) |
 
 ## Example /predict Response:
+
 ```json
 {
   "prediction": "Moderate Match",
@@ -210,9 +232,10 @@ Open http://localhost:3000 with your browser to see the result. You can start ed
   ]
 }
 ```
-
+---
 
 ## 🧠 Machine Learning Pipeline Details
+
 1. Data Generation: Creates synthetic resume/JD pairs with controlled overlap percentages to ensure balanced classes.
 2. Text Cleaning: Removes boilerplate, normalizes case, and preserves critical tech symbols (e.g., C++, .NET, C#).
 3. Skill Extraction: Uses a compiled, length-sorted Regex pattern to find skills, immediately mapping variations (e.g., "k8s" → "kubernetes") to a master SKILL_TAXONOMY.
@@ -223,14 +246,20 @@ Open http://localhost:3000 with your browser to see the result. You can start ed
 - Missing Count: Absolute number of required skills absent.
 5. Modeling: GradientBoostingClassifier with 5-fold cross-validated GridSearchCV to maximize accuracy.
 
+---
+
 ## 🗺️ Future Roadmap
+
 1. OCR Integration: Add support for image-based or scanned resumes using Tesseract or AWS Textract.
 2. Real Database: Replace in-memory authentication with PostgreSQL and hashed passwords (bcrypt).
 3. LLM Enhancement: Integrate a lightweight LLM (e.g., Llama 3 via Ollama) for semantic skill matching beyond strict keyword/regex matching.
 4. CI/CD Pipeline: Add GitHub Actions for automated testing (pytest) and linting.
 5. Dockerization: Add Dockerfile and docker-compose.yml for one-click, containerized deployment.
 
+---
+
 ## 📜 License & Deployment
+
 This project is licensed under the MIT License. 
 
 ## If you found this project helpful, please consider giving it a ⭐ on GitHub!
