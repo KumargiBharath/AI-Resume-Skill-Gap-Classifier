@@ -1,0 +1,16 @@
+creation_timestamp: 1773773750584
+current_stage: None
+deployment_job_state: null
+description: null
+last_updated_timestamp: 1773773750584
+model_id: m-c02f94dea9b548f181dec3d4a07ae795
+name: SkillGapClassifier
+run_id: 7b5d8ff6e2df44c7932ec51978d2ac1c
+run_link: null
+source: models:/m-c02f94dea9b548f181dec3d4a07ae795
+status: READY
+status_message: null
+storage_location: file:///C:/Users/vulli/Desktop/AI%20Resume%20Skill%20Gap%20Classifier/mlruns/188146737670395484/models/m-c02f94dea9b548f181dec3d4a07ae795/artifacts
+user_id: null
+version: 1
+workspace: default

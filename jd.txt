@@ -1,0 +1,41 @@
+Job Description
+
+[Company Name] seeks experienced frontend developers who are passionate about developing user-friendly designs. This role requires expertise in HTML, CSS, JavaScript, and modern frontend frameworks (React). The ideal candidate will have a strong eye for design and a deep understanding of frontend technologies.
+
+Responsibilities
+
+Translate web design mockups and feature requirements into functional, mobile-friendly websites using HTML, CSS, and JavaScript frameworks such as React, Angular, or Vue.js.
+
+Work closely with UI/UX designers to translate design wireframes into reusable code and collaborate with back-end developers to integrate APIs and services.
+
+Ensure cross-browser compatibility and optimize applications for maximum speed and scalability.
+
+Write clean, maintainable, and reusable code and conduct code reviews to ensure adherence to coding standards and best practices.
+
+Requirements
+
+Professional experience building dynamic frontend web applications and websites.
+
+Hands-on experience in HTML, CSS, JavaScript, and modern frontend frameworks.
+
+Solid understanding of responsive and adaptive design.
+
+Ability to collaborate with product managers, back-end developers, designers, and other team members during project development.
+
+Experience optimizing frontend performance for maximum speed and ensuring the technical feasibility of UI/UX designs.
+
+Hands-on experience with version control systems such as Git.
+
+Experience with tools for debugging and development automation like Chrome DevTools and Webpack.
+
+Relevant soft skills like customer service, communication, and problem-solving skills.
+
+Practical experience and a strong web developer portfolio that shows a broad range of abilities.
+
+Bachelor’s degree in computer science or relevant industry experience.
+
+Nice to Have
+
+Experience with web accessibility and SEO best practices.
+
+In-depth understanding of UI/UX design principles.

@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/vulli/Desktop/AI%20Resume%20Skill%20Gap%20Classifier/mlruns/188146737670395484/models/m-c02f94dea9b548f181dec3d4a07ae795/artifacts
+creation_timestamp: 1773773739729
+experiment_id: '188146737670395484'
+last_updated_timestamp: 1773773750491
+model_id: m-c02f94dea9b548f181dec3d4a07ae795
+model_type: null
+name: gradient_boost_model
+source_run_id: 7b5d8ff6e2df44c7932ec51978d2ac1c
+status: 2
+status_message: null

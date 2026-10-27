@@ -1,0 +1,7 @@
+setup.py
+skill_gap_classifier.egg-info/PKG-INFO
+skill_gap_classifier.egg-info/SOURCES.txt
+skill_gap_classifier.egg-info/dependency_links.txt
+skill_gap_classifier.egg-info/top_level.txt
+src/__init__.py
+src/config.py

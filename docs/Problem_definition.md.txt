@@ -1,0 +1,102 @@
+Phase 1: Problem Definition & Business Understanding
+
+Project Name: Production-Grade AI Resume Skill Gap Classifier
+
+Phase Status: Completed
+
+1. Executive Summary
+
+  A. Goal: Build an intelligent system to automate resume screening and skill gap analysis.
+
+  B. Value: Reduces manual screening time and provides actionable feedback to candidates.
+
+  C. Approach: Utilize NLP and Machine Learning to map resume skills against job requirements.
+
+2. Problem Statement
+
+  A. Inefficiency: Recruiters spend ~30% of their time on manual screening.
+
+  B. Inconsistency: Human evaluation of "fit" varies between recruiters.
+
+  C. Lack of Feedback: Candidates rarely receive specific reasons for rejection (e.g., missing skills).
+
+  D. Scalability: High-volume hiring campaigns create processing bottlenecks.
+
+3. Business Objectives
+
+  A. Efficiency: Reduce average time-to-screen from 5 minutes to under 5 seconds.
+
+  B. Quality: Increase the interview-to-offer ratio by filtering for true matches.
+
+  C. Experience: Provide automated, constructive upskilling feedback to candidates.
+
+4. Target Classification Labels
+
+  A. Strong Match:
+
+     Definition: Candidate possesses >90% of required skills.
+
+     Action: Fast-track to technical interview.
+
+  B. Moderate Match:
+
+     Definition: Candidate possesses 60-90% of required skills.
+
+     Action: Phone screen to assess adaptability.
+
+  C. Skill Gap:
+
+     Definition: Candidate possesses 30-60% of required skills; missing core competencies.
+
+     Action: Reject or redirect to junior roles.
+
+  D. High Skill Gap:
+
+     Definition: Candidate possesses <30% of required skills.
+
+     Action: Auto-reject with generic feedback.
+
+5. System Requirements
+
+  A. Latency: API response time must be < 500ms.
+
+  B. Input Formats: Support .pdf, .docx, and .txt.
+
+  C. Explainability: System must output specific missing skills to justify predictions.
+
+  D. Scalability: Architecture must support concurrent API requests.
+
+6. Scope of Work
+
+  A. In Scope:
+
+      Resume and Job Description parsing.
+
+      Skill extraction using NLP.
+
+      Feature engineering (similarity scores, match ratios).
+
+      Multi-class classification model training.
+
+      REST API development and containerization.
+
+  B. Out of Scope:
+
+      Parsing handwritten or image-based resumes (OCR).
+
+      Video or audio interview analysis.
+
+7. Success Criteria
+
+  A. Model achieves F1-Score > 0.75 on test data.
+
+  B. Skill extraction achieves Precision > 0.75.
+
+  C. Successful deployment of a live API endpoint.
+
+8. Risks & Mitigation
+  A. Data Privacy (PII): Implement data anonymization before processing.
+
+  B. Algorithmic Bias: Audit training data for demographic balance.
+
+  C. Extraction Errors: Implement fuzzy matching to catch misspelled skills.

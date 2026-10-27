@@ -1,0 +1,29 @@
+# Core Data Science
+pandas
+numpy
+scikit-learn
+
+# NLP & Text Processing
+spacy
+pdfminer.six
+python-docx
+
+# Machine Learning Models & Tracking
+xgboost
+mlflow
+joblib
+mlflow
+# Web API & Deployment
+fastapi
+uvicorn
+python-multipart
+pydantic
+
+# Visualization & Notebooks
+jupyter
+matplotlib
+seaborn
+
+# Testing
+pytest
+httpx
