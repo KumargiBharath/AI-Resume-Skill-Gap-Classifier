@@ -118,8 +118,8 @@ skill_gap_classifier/
 ### 1. Backend Setup
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/skill_gap_classifier.git
-cd skill_gap_classifier
+git clone https://github.com/KumargiBharath/AI-Resume-Skill-Gap-Classifier.git
+cd AI-Resume-Skill-Gap-Classifier
 
 # Create and activate a virtual environment
 python -m venv venv
